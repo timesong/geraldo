@@ -219,6 +219,13 @@ class ReportGenerator(GeraldoObject):
                     widget.top = self.calculate_top(temp_top, self.calculate_size(widget.top), self.calculate_size(para.height))
 
                 temp_height = self.calculate_size(element.top) + self.calculate_size(para.height)
+            elif isinstance(widget, PageBreak):
+                if not self._is_latest_page:
+                    self.force_new_page(False)
+                    self.render_begin()
+
+                self.render_end_current_page()
+                return
             else:
                 temp_height = self.calculate_size(element.top) + self.calculate_size(widget.height)
 

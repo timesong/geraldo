@@ -271,3 +271,5 @@ class SystemFieldDict(dict):
 
         return self.fields[key]
 
+class PageBreak(Widget):
+    pass

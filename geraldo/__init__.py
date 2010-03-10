@@ -43,7 +43,7 @@ __version__ = get_version()
 
 from base import Report, ReportBand, DetailBand, TableBand, ReportGroup,\
         SubReport, landscape, GeraldoObject, ManyElements, CROSS_COLS
-from widgets import Label, ObjectValue, SystemField
+from widgets import Label, ObjectValue, SystemField, PageBreak
 from widgets import FIELD_ACTION_VALUE, FIELD_ACTION_COUNT, FIELD_ACTION_AVG,\
         FIELD_ACTION_MIN, FIELD_ACTION_MAX, FIELD_ACTION_SUM,\
         FIELD_ACTION_DISTINCT_COUNT, BAND_WIDTH
